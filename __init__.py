@@ -10,7 +10,7 @@ Code is based on / inspired by libanki's LaTeX integration.
 
 # --- Imports: ---
 
-import cgi
+import html
 import re
 import shutil
 from html.entities import entitydefs
@@ -242,7 +242,7 @@ def _err_msg(type):
     try:
         log = open(TEMP_FILE + ".log", "r").read()
         if log:
-            msg += """<small><pre style="text-align: left">""" + cgi.escape(log) + "</pre></small>"
+            msg += """<small><pre style="text-align: left">""" + html.escape(log) + "</pre></small>"
     except:
         msg += _("Have you installed lilypond?")
     return msg
