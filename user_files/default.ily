@@ -1,6 +1,10 @@
 %%% default.ily
 \version "2.22.1"
 % http://lilypond.org/doc/Documentation/usage/other-programs
+#(ly:set-option 'crop #t)
+\header {
+  tagline = ##f
+}
 \paper{
   indent = 0\mm
   line-width = 120\mm
