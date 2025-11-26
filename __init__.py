@@ -23,7 +23,7 @@ from anki.media import MediaManager
 from anki.models import NoteType
 from anki.utils import call
 from anki.utils import checksum
-from anki.utils import stripHTML
+from anki.utils import strip_html
 from anki.utils import tmpfile
 from aqt import gui_hooks
 from aqt import mw
@@ -159,7 +159,7 @@ def _ly_from_html(ly):
     """Convert entities and fix newlines."""
 
     ly = re.sub(r"<(br|div|p) */?>", "\n", ly)
-    ly = stripHTML(ly)
+    ly = strip_html(ly)
 
     ly = ly.replace("&nbsp;", " ")
 
